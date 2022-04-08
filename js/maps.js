@@ -214,17 +214,21 @@ Number.prototype.pad = function(n) {
 var datess = new Date()
 
 
+
 if(datess.getDate()>=7){
-    f='Растущая Луна'
+    var f='Растущая Луна'
 }
 if(datess.getDate()>=14){
     f='Полнолуние'     
 }
 if(datess.getDate()>=21){
     f='Убывающая Луна'
-}else{
-    f='Новолуние'
 }
+if(datess.getDate()<7){
+f='Новолуние'
+}
+
+
   
 
   
@@ -238,7 +242,7 @@ if(datess.getDate()>=21){
     Страна: `+poz+` <br>
     Восход: `+Voshod+` <br>
     Закат: `+Zakat+` <br>
-    Фаза луны: `+ f+` `  
+    Фаза луны: `+f+` `  
   }
 // множитель 325-5:25 Восход- разница умноженная на число-1 из мин вычитаем разность минут 5.25-9
 

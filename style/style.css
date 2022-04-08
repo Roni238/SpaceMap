@@ -474,6 +474,9 @@ span {
     border-bottom: rgb(32, 32, 32) solid 3px;
     border-left: rgb(32, 32, 32) solid 3px;
 }
+body{
+    overflow-x: hidden;
+}
 }
 
 
