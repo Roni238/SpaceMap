@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en" class="wf-proximanovaextracondensed1-n6-active wf-active">
+  <!-- autor: Антон Костюк || https://github.com/Roni238  || ak4932320@gmail.com-->
+  <!--  ©  Костюк А.Е. , 2022—2023 -->
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    <title>SpaceMap</title> 
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="style/style.css">
+    <meta name="description" content=""> 
+    <meta name="keywords" content=""> 
+  </head> 
+  
+  <body>
+    
+    <canvas id="canvas" onclick="none()">
+
+    </canvas>
+    
+    <div id="watch">
+      <a id="mon">January</a>
+      <a id="d">1</a>,
+      <a id="y">0</a><br />
+      <a id="h">12</a> :
+      <a id="m">00</a>:
+      <a id="s">00</a>:
+      <a id="mi">000</a> <br>
+      <p onclick="search()" id="sch">Найди меня!</p>
+  </div>
+  <ul id="descriptions">
+    <li><h2 id="sun" onclick="sf()" >Солнце</h2></li>
+    <li><h2 id="mercury" onclick="s1()" onmouseover="ov1()" onmouseout="ou1()">Меркурий</h2></li>
+    <li><h2 id="venus" onclick="s2()" onmouseover="ov2()" onmouseout="ou2()">Венера</h2></li>
+    <li><h2 id="earth" onclick="s3()" onmouseover="ov3()" onmouseout="ou3()">Земля</h2></li>
+    <li><h2 id="mars" onclick="s4()" onmouseover="ov4()" onmouseout="ou4()">Марс</h2></li>
+    <li><h2 id="jupiter" onclick="s5()" onmouseover="ov5()" onmouseout="ou5()">Юпитер</h2></li>
+    <li><h2 id="saturn" onclick="s6()" onmouseover="ov6()" onmouseout="ou6()">Сатурн</h2></li>
+    <li><h2 id="uranus" onclick="s7()" onmouseover="ov7()" onmouseout="ou7()">Уран</h2></li>
+    <li><h2 id="neptune" onclick="s8()" onmouseover="ov8()" onmouseout="ou8()">Непнун</h2></li>
+    <li><h2 id="pluto" onclick="s9()" onmouseover="ov9()" onmouseout="ou9()">Плутон</h2></li>
+</ul>
+
+
+  <div class="wrap clearfix">
+
+    <section class="clearfix" >
+  
+        <ul class="solarsystem" >
+          <li class="sun"><span onclick="sf()">Солнце</span></li>
+          <li class="mercury" id="merc"><span onclick="s1()" onmouseover="ov1()" onmouseout="ou1()"style="background-image: url(img/pl1.svg);">Меркурий</span></li>
+          <li class="venus" id="ven"><span onclick="s2()" onmouseover="ov2()" onmouseout="ou2()"style="background-image: url(img/pl2.svg);">Венера</span></li>
+          <li class="earth" id="ear"><span onclick="s3()" onmouseover="ov3()" onmouseout="ou3()" style="background-image: url(img/pl3.svg);">Земля<span class="moon"> &amp; Луна</span></span></li>
+          <li class="mars" id="mar"><span onclick="s4()" onmouseover="ov4()" onmouseout="ou4()"style="background-image: url(img/pl4.svg);">Марс</span></li>
+
+          
+
+          <img src="img/astro.png" alt="" class="astro">
+
+          <li class="jupiter" id="jup"><span onclick="s5()" onmouseover="ov5()" onmouseout="ou5()"style="background-image: url(img/pl5.svg);">Юпитер</span></li>
+
+          <li class="saturn" id="sat"><span onclick="s6()" onmouseover="ov6()" onmouseout="ou6()" style="background-image: url(img/pl6.svg);">Сатурн &amp; </span></li>
+          <li class="uranus" id="ura"><span onclick="s7()" onmouseover="ov7()" onmouseout="ou7()"style="background-image: url(img/pl7.svg);">Уран</span></li>
+          <li class="neptune" id="nep"><span onclick="s8()" onmouseover="ov8()" onmouseout="ou8()" style="background-image: url(img/pl8.svg);">Непнун</span></li>
+          <li class="pluto" id="plu"><span onclick="s9()" onmouseover="ov9()" onmouseout="ou9()" style="background-image: url(img/pl9.svg);">Плутон</span></li>
+        </ul>
+        
+        
+        
+    </section>
+  
+  
+  </div>
+  <div class="info" id="infoS">
+    <div onclick="none()" class="exit">X</div>
+    <img src="" alt="" id="gif">
+    <h2 id="h2"></h2>
+    <p id="p"></p>
+    <a href="/" id="a" target="_blank"> <br> Подробнее</a>
+</div>
+  
+<script src="js/maps.js"></script>
+  
+  </body></html>
