@@ -1,5 +1,6 @@
 /* autor: Антон Костюк || https://github.com/Roni238  || ak4932320@gmail.com
     ©  Костюк А.Е. , 2022—2023  */
+   
 (function(){
     var cvs = document.getElementById('canvas')
     var ctx = cvs.getContext("2d")
@@ -116,6 +117,7 @@
     var h2=document.getElementById('h2')
     var a =document.getElementById('a')
     var gif=document.getElementById('gif')
+    
 function sf(){
     
     sunIn.style="display: inline;"
@@ -183,7 +185,7 @@ function s5(){
  function none(){
     sunIn.style="display: none;"
    }
-   
+   //часы
 Number.prototype.pad = function(n) {
     for (var r = this.toString(); r.length < n; r = 0 + r);
     return r
@@ -210,11 +212,8 @@ Number.prototype.pad = function(n) {
     window.setInterval("updateClock()", 1)
   }
 
-  
+  //смена фаза луны
 var datess = new Date()
-
-
-
 if(datess.getDate()>=7){
     var f='Растущая Луна'
 }
@@ -244,8 +243,6 @@ f='Новолуние'
     Закат: `+Zakat+` <br>
     Фаза луны: `+f+` `  
   }
-// множитель 325-5:25 Восход- разница умноженная на число-1 из мин вычитаем разность минут 5.25-9
-
 // Вычислитель восхода в каждом месяце
 
 switch(datess.getMonth()+1){
@@ -381,76 +378,36 @@ switch(datess.getMonth()+1){
  if(Zm<10){
      Zakat=Zakat=Zh+":0"+Zm
  }
- 
- function ov1(){ 
-    document.getElementById('merc').style="border:solid #ed1f24 2px"
- }
- function ou1(){
-    document.getElementById('merc').style='border: 2px dotted #c1c1c1;' 
- }
- function ov2(){ 
-    document.getElementById('ven').style="border:solid #ed1f24 2px"
- }
- function ou2(){
-    document.getElementById('ven').style='border: 2px dotted #c1c1c1;' 
- }
- function ov3(){ 
-    document.getElementById('ear').style="border:solid #ed1f24 2px"
- }
- function ou3(){
-    document.getElementById('ear').style='border: 2px dotted #c1c1c1;' 
- }
- function ov4(){ 
-    document.getElementById('mar').style="border:solid #ed1f24 2px"
- }
- function ou4(){
-    document.getElementById('mar').style='border: 2px dotted #c1c1c1;' 
- }
- function ov5(){ 
-    document.getElementById('jup').style="border:solid #ed1f24 2px"
- }
- function ou5(){
-    document.getElementById('jup').style='border: 2px dotted #c1c1c1;' 
- }
- function ov6(){ 
-    document.getElementById('sat').style="border:solid #ed1f24 2px"
- }
- function ou6(){
-    document.getElementById('sat').style='border: 2px dotted #c1c1c1;' 
- }
- function ov7(){ 
-    document.getElementById('ura').style="border:solid #ed1f24 2px"
- }
- function ou7(){
-    document.getElementById('ura').style='border: 2px dotted #c1c1c1;' 
- }
- function ov8(){ 
-    document.getElementById('nep').style="border:solid #ed1f24 2px"
- }
- function ou8(){
-    document.getElementById('nep').style='border: 2px dotted #c1c1c1;' 
- }
- function ov9(){ 
-    document.getElementById('plu').style="border:solid #ed1f24 2px"
- }
- function ou9(){
-    document.getElementById('plu').style='border: 2px dotted #c1c1c1;' 
- }
+ // выделение траектории
+ let ov1=()=>document.getElementById('merc').style="border:solid #ed1f24 2px"
+ let ou1=()=>document.getElementById('merc').style='border: 2px dotted #c1c1c1;'
+ let ov2=()=>document.getElementById('ven').style="border:solid #ed1f24 2px"
+ let ou2=()=>document.getElementById('ven').style='border: 2px dotted #c1c1c1;'
+ let ov3=()=>document.getElementById('ear').style="border:solid #ed1f24 2px"
+ let ou3=()=>document.getElementById('ear').style='border: 2px dotted #c1c1c1;' 
+ let ov4=()=>document.getElementById('mar').style="border:solid #ed1f24 2px"
+ let ou4=()=>document.getElementById('mar').style='border: 2px dotted #c1c1c1;'
+ let ov5=()=>document.getElementById('jup').style="border:solid #ed1f24 2px"
+ let ou5=()=>document.getElementById('jup').style='border: 2px dotted #c1c1c1;' 
+ let ov6=()=>document.getElementById('sat').style="border:solid #ed1f24 2px"
+ let ou6=()=>document.getElementById('sat').style='border: 2px dotted #c1c1c1;' 
+ let ov7=()=>document.getElementById('ura').style="border:solid #ed1f24 2px"
+ let ou7=()=>document.getElementById('ura').style='border: 2px dotted #c1c1c1;'  
+ let ov8=()=>document.getElementById('nep').style="border:solid #ed1f24 2px"
+ let ou8=()=>document.getElementById('nep').style='border: 2px dotted #c1c1c1;' 
+ let ov9=()=>document.getElementById('plu').style="border:solid #ed1f24 2px"
+ let ou9=()=>document.getElementById('plu').style='border: 2px dotted #c1c1c1;' 
 
-
+ //вычисление страны по часовому поясу
 var offset = new Date().getTimezoneOffset();
 if(offset<0)
 {
-    
     var Tz="UTC+" + Math.ceil(offset/-60)
 }
 if(offset>0)
 {
-    
     Tz="UTC-" + Math.ceil(offset/-60)
 } 
-
-
 if(Tz=='UTC-12'){
     var poz= `Американское Самоа (`+Tz+`)`
 }
