@@ -14,10 +14,7 @@
   </head> 
   
   <body>
-    
-    <canvas id="canvas" onclick="none()">
-
-    </canvas>
+    <canvas id="canvas" onclick="closeDescription()"></canvas>
     
     <div id="watch">
       <a id="mon">January</a>
@@ -28,42 +25,97 @@
       <a id="s">00</a>:
       <a id="mi">000</a> <br>
       <p onclick="search()" id="sch">Найди меня!</p>
-  </div>
-  <ul id="descriptions">
-    <li><h2 id="sun" onclick="sf()" >Солнце</h2></li>
-    <li><h2 id="mercury" onclick="s1()" onmouseover="ov1()" onmouseout="ou1()">Меркурий</h2></li>
-    <li><h2 id="venus" onclick="s2()" onmouseover="ov2()" onmouseout="ou2()">Венера</h2></li>
-    <li><h2 id="earth" onclick="s3()" onmouseover="ov3()" onmouseout="ou3()">Земля</h2></li>
-    <li><h2 id="mars" onclick="s4()" onmouseover="ov4()" onmouseout="ou4()">Марс</h2></li>
-    <li><h2 id="jupiter" onclick="s5()" onmouseover="ov5()" onmouseout="ou5()">Юпитер</h2></li>
-    <li><h2 id="saturn" onclick="s6()" onmouseover="ov6()" onmouseout="ou6()">Сатурн</h2></li>
-    <li><h2 id="uranus" onclick="s7()" onmouseover="ov7()" onmouseout="ou7()">Уран</h2></li>
-    <li><h2 id="neptune" onclick="s8()" onmouseover="ov8()" onmouseout="ou8()">Непнун</h2></li>
-    <li><h2 id="pluto" onclick="s9()" onmouseover="ov9()" onmouseout="ou9()">Плутон</h2></li>
-</ul>
+    </div>
+
+
+    <ul id="sideMenu">
+      <li>
+        <h2 id="sun" onclick="createObj(sunArg)">Солнце</h2>
+      </li>
+
+      <li>
+        <h2 id="mercury" onclick="createObj(mercuryArg)" onmouseover="over(merc)" onmouseout="out(merc)">Меркурий</h2>
+      </li>
+
+      <li>
+        <h2 id="venus" onclick="createObj(veneraArg)" onmouseover="over(ven)" onmouseout="out(ven)">Венера</h2>
+      </li>
+
+      <li>
+        <h2 id="earth" onclick="createObj(earthArg)" onmouseover="over(ear)" onmouseout="out(ear)">Земля</h2>
+      </li>
+
+      <li>
+        <h2 id="mars" onclick="createObj(marsArg)" onmouseover="over(mar)" onmouseout="out(mar)">Марс</h2>
+      </li>
+
+      <li>
+        <h2 id="jupiter" onclick="createObj(upiterArg)" onmouseover="over(jup)" onmouseout="out(jup)">Юпитер</h2>
+      </li>
+
+      <li>
+        <h2 id="saturn" onclick="createObj(saturnArg)" onmouseover="over(sat)" onmouseout="out(sat)">Сатурн</h2>
+      </li>
+
+      <li>
+        <h2 id="uranus" onclick="createObj(uranArg)" onmouseover="over(ura)" onmouseout="out(ura)">Уран</h2>
+      </li>
+
+      <li>
+        <h2 id="neptune" onclick="createObj(neptunuArg)" onmouseover="over(nep)" onmouseout="out(nep)">Непнун</h2>
+      </li>
+
+      <li>
+        <h2 id="pluto" onclick="createObj(plutoArg)" onmouseover="over(plu)" onmouseout="out(plu)">Плутон</h2>
+      </li>
+    </ul>
 
 
   <div class="wrap clearfix">
-
     <section class="clearfix" >
-  
         <ul class="solarsystem" >
-          <li class="sun"><span onclick="sf()">Солнце</span></li>
-          <li class="mercury" id="merc"><span onclick="s1()" onmouseover="ov1()" onmouseout="ou1()"style="background-image: url(img/pl1.svg);">Меркурий</span></li>
-          <li class="venus" id="ven"><span onclick="s2()" onmouseover="ov2()" onmouseout="ou2()"style="background-image: url(img/pl2.svg);">Венера</span></li>
-          <li class="earth" id="ear"><span onclick="s3()" onmouseover="ov3()" onmouseout="ou3()" style="background-image: url(img/pl3.svg);">Земля<span class="moon"> &amp; Луна</span></span></li>
-          <li class="mars" id="mar"><span onclick="s4()" onmouseover="ov4()" onmouseout="ou4()"style="background-image: url(img/pl4.svg);">Марс</span></li>
-
           
+          <li class="sun">
+            <span onclick="createObj(sunArg)">Солнце</span>
+          </li>
+
+          <li class="mercury" id="merc">
+            <span onclick="createObj(mercuryArg)" onmouseover="over(merc)" onmouseout="out(merc)"style="background-image: url(img/pl1.svg);">Меркурий</span>
+          </li>
+
+          <li class="venus" id="ven">
+            <span onclick="createObj(veneraArg)" onmouseover="over(ven)" onmouseout="out(ven)"style="background-image: url(img/pl2.svg);">Венера</span>
+          </li>
+
+          <li class="earth" id="ear">
+            <span onclick="createObj(earthArg)" onmouseover="over(ear)" onmouseout="out(ear)" style="background-image: url(img/pl3.svg);">Земля<span class="moon"> &amp; Луна</span></span>
+          </li>
+
+          <li class="mars" id="mar">
+            <span onclick="createObj(marsArg)" onmouseover="over(mar)" onmouseout="out(mar)"style="background-image: url(img/pl4.svg);">Марс</span>
+          </li>
 
           <img src="img/astro.png" alt="" class="astro">
 
-          <li class="jupiter" id="jup"><span onclick="s5()" onmouseover="ov5()" onmouseout="ou5()"style="background-image: url(img/pl5.svg);">Юпитер</span></li>
+          <li class="jupiter" id="jup">
+            <span onclick="createObj(upiterArg)" onmouseover="over(jup)" onmouseout="out(jup)"style="background-image: url(img/pl5.svg);">Юпитер</span>
+          </li>
 
-          <li class="saturn" id="sat"><span onclick="s6()" onmouseover="ov6()" onmouseout="ou6()" style="background-image: url(img/pl6.svg);">Сатурн &amp; </span></li>
-          <li class="uranus" id="ura"><span onclick="s7()" onmouseover="ov7()" onmouseout="ou7()"style="background-image: url(img/pl7.svg);">Уран</span></li>
-          <li class="neptune" id="nep"><span onclick="s8()" onmouseover="ov8()" onmouseout="ou8()" style="background-image: url(img/pl8.svg);">Непнун</span></li>
-          <li class="pluto" id="plu"><span onclick="s9()" onmouseover="ov9()" onmouseout="ou9()" style="background-image: url(img/pl9.svg);">Плутон</span></li>
+          <li class="saturn" id="sat">
+            <span onclick="createObj(saturnArg)" onmouseover="over(sat)" onmouseout="out(sat)" style="background-image: url(img/pl6.svg);">Сатурн &amp; </span>
+          </li>
+
+          <li class="uranus" id="ura">
+            <span onclick="createObj(uranArg)" onmouseover="over(ura)" onmouseout="out(ura)"style="background-image: url(img/pl7.svg);">Уран</span>
+          </li>
+
+          <li class="neptune" id="nep">
+            <span onclick="createObj(neptunuArg)" onmouseover="over(nep)" onmouseout="out(nep)" style="background-image: url(img/pl8.svg);">Непнун</span>
+          </li>
+
+          <li class="pluto" id="plu">
+            <span onclick="createObj(plutoArg)" onmouseover="over(plu)" onmouseout="out(plu)" style="background-image: url(img/pl9.svg);">Плутон</span>
+          </li>
         </ul>
         
         
@@ -72,14 +124,18 @@
   
   
   </div>
-  <div class="info" id="infoS">
-    <div onclick="none()" class="exit">X</div>
+  <div class="info" id="description">
+    <div onclick="closeDescription()" class="exit">X</div>
     <img src="" alt="" id="gif">
     <h2 id="h2"></h2>
     <p id="p"></p>
     <a href="/" id="a" target="_blank"> <br> Подробнее</a>
-</div>
-  
-<script src="js/maps.js"></script>
-  
+  </div>
+
+
+<script src="js/clock.js"></script>
+<script src="js/bg.js"></script>
+<script src="js/orbits.js"></script>
+<script src="js/description.js"></script>  
+<script src="js/logic.js"></script>
   </body></html>

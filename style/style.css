@@ -312,7 +312,7 @@ ul.solarsystem li.pluto {
 }
 
 
-#descriptions {
+#sideMenu {
     border-left:solid #ed1f24 3px ;
     padding: 2px;
     position: absolute;
@@ -321,7 +321,7 @@ ul.solarsystem li.pluto {
     list-style: none;
     margin: 10px;
 }
-#descriptions h2 {
+#sideMenu h2 {
     cursor: pointer;
     color: rgba(255, 255, 255, 0.863);
     -webkit-transition: all 0.15s ease-in;
@@ -336,7 +336,7 @@ ul.solarsystem li.pluto {
     -o-transform: scale(1);
     transform: scale(1);
 }
-#descriptions h2:hover {
+#sideMenu h2:hover {
    color: rgba(29, 104, 254, 0.863); 
     -webkit-transform: scale(1.08);
     -moz-transform: scale(1.08);
